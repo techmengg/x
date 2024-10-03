@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinning Cat</title>
+    
+    <!-- Preload the image to speed up loading -->
+    <link rel="preload" as="image" href="sensitive_info/donotclick.webp">
+
     <style>
         body {
             margin: 0;
@@ -18,7 +22,7 @@
         .cat-container img {
             width: 200px;
             height: 200px;
-            animation: spin 2s linear infinite;
+            animation: spin 5s linear infinite;
         }
 
         @keyframes spin {
@@ -29,7 +33,8 @@
 </head>
 <body>
     <div class="cat-container">
-        <img src="sensitive_info/donotclick.png" alt="Spinning Cat">
+        <!-- Lazy loading the image -->
+        <img src="sensitive_info/donotclick.png" alt="Spinning Cat" loading="lazy">
     </div>
 </body>
 </html>
